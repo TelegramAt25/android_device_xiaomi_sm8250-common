@@ -298,6 +298,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor # Needed by CNE app
 
+# Properties
+include $(LOCAL_PATH)/vendor_logtag.mk
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
