@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 endif
 
+# Async MTE
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    arm64.memtag.process.system_server=off
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
