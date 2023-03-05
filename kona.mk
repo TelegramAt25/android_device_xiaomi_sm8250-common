@@ -244,6 +244,10 @@ PRODUCT_PACKAGES += \
     uinput-fpc.idc \
     uinput-goodix.idc
 
+# IncFS
+ PRODUCT_PROPERTY_OVERRIDES += \
+     ro.incremental.enable=yes
+
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
