@@ -363,6 +363,10 @@ service mi-serial-sh /vendor/bin/init.mi.serial.sh
 on post-fs && property:ro.product.device=elish
     start mi-serial-sh
 
+on property:sys.boot_completed=1
+    # STOP EATING MY BATTERY AFTER 100H OF UPTIME FUCK YOU
+    stop statsd
+
 on property:sys.lmkd.memory.start_reclaim_in_video_record=1
     setprop sys.lmkd.memory.start_reclaim_in_video_record 0
     write /sys/kernel/cam_reclaim/event 1
