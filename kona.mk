@@ -94,7 +94,7 @@ endif
 
 # Async MTE
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    arm64.memtag.process.system_server=off
+    persist.arm64.memtag.system_server=off
 
 # Audio
 PRODUCT_PACKAGES += \
