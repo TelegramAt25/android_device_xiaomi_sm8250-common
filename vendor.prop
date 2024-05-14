@@ -208,6 +208,9 @@ persist.vendor.hvdcp_opti.disallowed=1
 # Keystore
 ro.hardware.keystore_desede=true
 
+# LMK
+ro.lmk.log_stats=false
+
 # Logd
 ro.logd.kernel=false
 
