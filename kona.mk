@@ -324,6 +324,10 @@ PRODUCT_PACKAGES += \
 # Properties
 include $(LOCAL_PATH)/vendor_logtag.mk
 
+# Ril
+PRODUCT_PACKAGES += \
+    android.hardware.radio-service.compat
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
