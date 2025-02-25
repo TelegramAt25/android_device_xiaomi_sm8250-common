@@ -110,6 +110,9 @@ TARGET_KERNEL_CONFIG := \
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
+# Malloc
+MALLOC_LOW_MEMORY := true
+
 # Media
 TARGET_USES_ION := true
 
