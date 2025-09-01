@@ -62,7 +62,6 @@ AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 AUDIO_FEATURE_ENABLED_SSR := false
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := kona
@@ -106,9 +105,6 @@ TARGET_KERNEL_CONFIG := \
     vendor/kona-perf_defconfig \
     vendor/debugfs.config \
     vendor/xiaomi/sm8250-common.config
-
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # Malloc
 MALLOC_LOW_MEMORY := true

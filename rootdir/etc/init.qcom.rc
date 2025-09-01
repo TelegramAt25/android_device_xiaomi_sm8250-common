@@ -181,9 +181,7 @@ on boot
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
 
-    # Allow access to emmc rawdump block partition and dload sysfs node
-    chown root system /dev/block/bootdevice/by-name/rawdump
-    chmod 0660 /dev/block/bootdevice/by-name/rawdump
+    # Allow access to emmc dload sysfs node
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
     chown root system /dev/block/bootdevice/by-name/ramdump
@@ -745,16 +743,6 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
     group graphics audio
     disabled
     oneshot
-
-service time_daemon /vendor/bin/time_daemon
-    class main
-    user system
-    group system
-    capabilities SYS_TIME
-
-# Set vendor-ril lib path based on Meta version
-on property:vendor.rild.libpath=*
-    setprop rild.libpath ${vendor.rild.libpath}
 
 on property:ro.vendor.radio.noril=*
     setprop ro.radio.noril ${ro.vendor.radio.noril}
